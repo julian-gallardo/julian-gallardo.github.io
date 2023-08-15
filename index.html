@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+<title>Julian Galllardo</title>
+<link href="static/styles.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://randojs.com/1.0.0.js"></script>
+
+</head>
+<body>
+  <div id="RNG"></div>
+
+<div style="display:flex; flex-direction:row; width:100%; justify-content:space-between; margin-bottom:40px">
+<div>
+<h1 style="font-weight: 600; color:#000000; font-size:46px; line-height:1; margin-bottom: 0%;"  >Julián Gallardo</h1>
+<p style="font-size: 100%;color: #919191; margin-top: 0%"><i>Estudiante de Arquitectura. 2020 - 2025</i></p>
+<br>
+<p><a class="linkPage" href="project1.html" >Proyecto 1° Cuatrimestre 2021</a></p>
+<p><a class="linkPage" href="project2.html" >Proyecto 2° Cuatrimestre 2021</a></p>
+<p><a class="linkPage" href="project3.html" >Proyecto Anual 2022</a></p>
+<p><a class="linkPage" href="project4.html" >Proyecto 1° Cuatrimestre 2023</a></p>
+</div>
+<div>
+<model-viewer id="modelHome" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1.31"  style="width: 400px; height: 400px; border-radius: 50%; background-color:rgb(252, 248, 232)" auto-rotate></model-viewer>
+</div>
+</div>
+<script>
+  let randomNumber;
+    function showRandomNumber(){
+        randomNumber = rando(1, 4);
+        const modelHome = document.getElementById("modelHome")
+        const modelHomeLink = "static/models/GLB0" + randomNumber + ".glb"
+
+        modelHome.setAttribute("src", modelHomeLink)
+    }
+
+    showRandomNumber()
+</script>
+</body>
+</html>
+
