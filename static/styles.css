@@ -60,3 +60,15 @@ body {
   .linkPage:hover {
     color:rgb(255, 183, 49)
   }
+
+  .back-button {
+    width: 45px;
+    display: flex;
+    border-radius: 100px;
+    padding: 10px;
+    transition: 0.1s ease-in-out;
+  }
+
+  .back-button:hover {
+    background-color:rgb(255, 183, 49)
+  }
