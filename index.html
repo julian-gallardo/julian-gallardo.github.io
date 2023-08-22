@@ -28,7 +28,10 @@
 <p><a class="linkPage" href="project4.html" >Proyecto 1° Cuatrimestre 2023</a></p>
 </div>
 <div>
-<model-viewer id="modelHome" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1.31" environment-image="legacy" exposure="1.1" style="width: 400px; height: 400px; border-radius: 50%; background-color:rgb(252, 248, 232)" auto-rotate ></model-viewer>
+<model-viewer id="modelHome" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1.31" environment-image="legacy" exposure="1.1" style="width: 400px; height: 400px; border-radius: 50%; background-color:rgb(252, 248, 232)" auto-rotate progress-bar-height = "0px;"></model-viewer>
+<div class="progress-bar hide" slot="progress-bar">
+  <div class="update-bar"></div>
+</div>
 </div>
 </div>
 <script>
@@ -36,8 +39,11 @@
     function showRandomNumber(){
         randomNumber = rando(1, 4);
         const modelHome = document.getElementById("modelHome")
-        const modelHomeLink = "static/models/GLB0" + randomNumber + ".glb"
 
+        const posterHomeLink = "static/models/poster0" + randomNumber + ".webp"
+        modelHome.setAttribute("poster", posterHomeLink)
+
+        const modelHomeLink = "static/models/GLB0" + randomNumber + ".glb"
         modelHome.setAttribute("src", modelHomeLink)
     }
 

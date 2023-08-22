@@ -55,15 +55,21 @@ body {
     font-size: 120%; 
     color:#000000;
     text-decoration: none;
+    transition-duration: 0.5s;
+    
   }
 
   .linkPage:hover {
-    color:rgb(255, 183, 49)
+    color:rgb(255, 183, 49);
+    padding-left: 10px;
+    transition-duration: 0.5s;
+
   }
 
   .back-button {
     width: 45px;
     display: flex;
+    margin-left: -10px;
     border-radius: 100px;
     padding: 10px;
     transition: 0.1s ease-in-out;
