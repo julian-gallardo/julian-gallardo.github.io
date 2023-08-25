@@ -24,99 +24,42 @@
 
 </div>
 <div>
-<model-viewer src="static/models/GLB01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" environment-image="static/models/spruit_sunrise_4k.hdr" exposure="0.9" shadow-softness="1" style="width: 400px;    height: 400px; border-radius: 50%; background-color:rgb(252, 248, 232)" auto-rotate poster="static/models/poster01.webp"></model-viewer>
+<model-viewer src="static/models/GLB01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" environment-image="static/models/spruit_sunrise_4k.hdr" exposure="0.9" shadow-softness="1" class="model" auto-rotate poster="static/models/poster01.webp"></model-viewer>
 </div>
 </div>
-<div>
-    <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM01.webp">
-            <img src="static/resources/RECURSOS01/01_LAM01.webp" alt="Lamina 01">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM02.webp">
-            <img src="static/resources/RECURSOS01/01_LAM02.webp" alt="Lamina 02">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM03.webp">
-            <img src="static/resources/RECURSOS01/01_LAM03.webp" alt="Lamina 03">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM04.webp">
-            <img src="static/resources/RECURSOS01/01_LAM04.webp" alt="Lamina 04">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM05.webp">
-            <img src="static/resources/RECURSOS01/01_LAM05.webp" alt="Lamina 05">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM06.webp">
-            <img src="static/resources/RECURSOS01/01_LAM06.webp" alt="Lamina 06">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM07.webp">
-            <img src="static/resources/RECURSOS01/01_LAM07.webp" alt="Lamina 07">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM08.webp">
-            <img src="static/resources/RECURSOS01/01_LAM08.webp" alt="Lamina 08">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM09.webp">
-            <img src="static/resources/RECURSOS01/01_LAM09.webp" alt="Lamina 09">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM010.webp">
-            <img src="static/resources/RECURSOS01/01_LAM010.webp" alt="Lamina 10">
-          </a>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="static/resources/RECURSOS01/01_LAM11.webp">
-            <img src="static/resources/RECURSOS01/01_LAM11.webp" alt="Lamina 11">
-          </a>
-        </div>
-      </div>
 
-      <div class="clearfix"></div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
 </div>
+
+<script>
+  var modal = document.getElementById("myModal");
+
+  for(var i = 1; i < 12; i++) {
+    document.body.innerHTML += '<div class="responsive"><div class="gallery"><img onclick="openModal(this)" id="img'+ i +'" src="static/resources/RECURSOS01/01_LAM' + i + '.webp"></div></div>'
+  }
+
+  var modal = document.getElementById("myModal");
+
+  let modalImg = document.getElementById("modalImg");
+
+  function openModal(elem) {
+    thisSrc = elem.src
+    modalImg.src = thisSrc;
+    modal.style.display = "block";
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+
+</script>
+<div class="clearfix"></div>
 </body>
 </html>
