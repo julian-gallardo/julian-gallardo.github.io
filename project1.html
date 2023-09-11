@@ -14,19 +14,19 @@
 </head>
 <body>
 
-<div style="display:flex; flex-direction:row; width:100%; justify-content:space-between; margin-bottom:40px">
-<div>
-  <a  class="back-button" href="/"><img src="static/resources/vector-back-icon.png" width="25px" height="25px"></a>
-<h1 style="font-weight: 600; color:#000000; font-size:34px; line-height:1" >Lugar de Encuentro en Rio Uruguay, Entre Rios</h1>
-<p style="font-size: 120%;color: #919191;"><i>Proyecto 1° Cuatrimestre 2021</i></p>
-<p style="font-size: 120%;color: #919191"><i>Catedra: Maldonado</i></p>
-<p style="font-size: 120%;color: #919191"><i>Alumnos: Julián Gallardo, Franco Lopez</i></p>
-<p style="font-size: 120%;color: #919191"><i>Nota: 10</i></p>
+<div style="display:flex;flex-direction:row;justify-content:space-between;margin-bottom:40px;">
+  <div style = "width: 66.667%; padding: 6px;">
+    <a  class="back-button" href="/"><img src="static/resources/vector-back-icon.png" width="25px" height="25px"></a>
+  <h1 style="font-weight: 600; color:#000000; font-size:34px; line-height:1" >Lugar de Encuentro en Rio Uruguay, Entre Rios</h1>
+  <p style="font-size: 120%;color: #919191;"><i>Proyecto 1° Cuatrimestre 2021</i></p>
+  <p style="font-size: 120%;color: #919191"><i>Catedra: Maldonado</i></p>
+  <p style="font-size: 120%;color: #919191"><i>Alumnos: Julián Gallardo, Franco Lopez</i></p>
+  <p style="font-size: 120%;color: #919191"><i>Nota: 10</i></p>
 
 </div>
-<div style="padding-right: 6px;">
-<model-viewer src="static/models/GLB01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" environment-image="static/models/spruit_sunrise_4k.hdr" exposure="0.9" shadow-softness="1" class="model" auto-rotate poster="static/models/poster01.webp"></model-viewer>
-</div>
+<div style="padding: 6px; width: 33.332%; aspect-ratio: 1 / 1; ">
+  <model-viewer src="static/models/GLB01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" environment-image="static/models/spruit_sunrise_4k.hdr" exposure="0.9" shadow-softness="1" class="model" auto-rotate poster="static/models/poster01.webp"></model-viewer>
+  </div>
 </div>
 
 <div id="myModal" class="modal">
@@ -52,10 +52,8 @@
     modal.style.display = "block";
   }
 
-  // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on <span> (x), close the modal
   span.onclick = function() { 
     modal.style.display = "none";
   }
