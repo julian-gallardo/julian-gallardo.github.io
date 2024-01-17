@@ -1,0 +1,64 @@
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+<title>Julian Gallardo</title>
+<link href="static/styles.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="display:flex; flex-direction:row; justify-content:space-between; margin-bottom:40px">
+<div style = "width: 66.667%; padding: 6px;">
+  <a  class="back-button" href="/"><img src="static/resources/vector-back-icon.png" width="25px" height="25px"></a>
+<h1 style="font-weight: 600; color:#000000; font-size:34px; line-height:1" >Escuela de Cine e Interpretacion en el barrio Monserrat, C.A.B.A.</h1>
+<p style="font-size: 120%;color: #919191;"><i>Proyecto 2° Cuatrimestre 2023</i></p>
+<p style="font-size: 120%;color: #919191"><i>Catedra: Maldonado</i></p>
+<p style="font-size: 120%;color: #919191"><i>Alumno: Julián Gallardo</i></p>
+<p style="font-size: 120%;color: #919191"><i>Nota: 7</i></p>
+
+</div>
+<div style="padding: 6px; width: 33.332%; aspect-ratio: 1 / 1; ">
+<model-viewer src="static/models/GLB05.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" environment-image="static/models/spruit_sunrise_4k.hdr" exposure="1.1" shadow-softness="1" class="model"  auto-rotate poster="static/models/poster05.webp"></model-viewer>
+</div>
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+</div>
+
+<script>
+  var modal = document.getElementById("myModal");
+
+  for(var i = 1; i < 30; i++) {
+    document.body.innerHTML += '<div class="responsive"><div class="gallery"><img onclick="openModal(this)" id="img'+ i +'" src="static/resources/RECURSOS05/05_LAM' + i + '.webp"></div></div>'
+  }
+
+  var modal = document.getElementById("myModal");
+
+  let modalImg = document.getElementById("modalImg");
+
+  function openModal(elem) {
+    thisSrc = elem.src
+    modalImg.src = thisSrc;
+    modal.style.display = "block";
+  }
+
+  var span = document.getElementsByClassName("close")[0];
+
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+
+</script>
+
+<div class="clearfix"></div>
+</body>
+</html>

@@ -20,13 +20,14 @@
 <div style="display:flex; flex-direction:row; width:100%; justify-content:space-between; margin-bottom:40px">
 <div>
 <h1 style="font-weight: 600; color:#000000; font-size:46px; line-height:1; margin-bottom: 0%;"  >Julián Gallardo</h1>
-<p style="font-size: 90%;color: #919191; margin-top: 0%; margin-bottom: 0%;"><i>Estudiante de 3° Año de Arquitectura </i></p>
+<p style="font-size: 90%;color: #919191; margin-top: 0%; margin-bottom: 0%;"><i>Estudiante de 4° Año de Arquitectura </i></p>
 <p style="font-size: 90%;color: #919191; margin-top: 0%; margin-bottom: 0%;"><i>FADU, Universidad de Buenos Aires </i></p>
 <br>
 <p><a class="linkPage" href="project1.html" >Proyecto 1° Cuatrimestre 2021</a></p>
 <p><a class="linkPage" href="project2.html" >Proyecto 2° Cuatrimestre 2021</a></p>
 <p><a class="linkPage" href="project3.html" >Proyecto Anual 2022</a></p>
 <p><a class="linkPage" href="project4.html" >Proyecto 1° Cuatrimestre 2023</a></p>
+<p><a class="linkPage" href="project5.html" >Proyecto 2° Cuatrimestre 2023</a></p>
 </div>
 <div style="padding: 6px; width: 33.332%; aspect-ratio: 1 / 1; ">
 <model-viewer id="modelHome" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1.31" environment-image="legacy" exposure="1.1" class="model" auto-rotate progress-bar-height = "0px;"></model-viewer>
@@ -38,7 +39,7 @@
 <script>
   let randomNumber;
     function showRandomNumber(){
-        randomNumber = rando(1, 4);
+        randomNumber = rando(1, 5);
         const modelHome = document.getElementById("modelHome")
 
         const posterHomeLink = "static/models/poster0" + randomNumber + ".webp"
